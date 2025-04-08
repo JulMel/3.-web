@@ -1,0 +1,122 @@
+/* Resetování defaultních stylů */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***** reusable *****/
+.row {
+  max-width: 1140px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/***** header-obsah *****/
+header {
+  background: linear-gradient(rgba(41, 0, 0, 0.5), rgba(53, 2, 2, 0.5)),
+    url("images/zmrzlina.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1140px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 200px;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 15px;
+}
+
+/***** fotogalerie *****/
+.fotky {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.fotky img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/***** footer *****/
+.footer-krem {
+  background-color: rgb(48, 7, 7);
+  color: white;
+  padding: 10px;
+  position: relative;
+  margin-top: 40px; /* Zajištění, že patička nebude až na konci */
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: rgb(48, 7, 7);
+  color: white;
+  text-align: center;
+}
+
+/***** media query pro mobilní zařízení *****/
+@media (max-width: 768px) {
+  .fotky {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 150px;
+    margin-left: 0;
+  }
+}

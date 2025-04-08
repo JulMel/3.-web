@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***** reusable *****/
+
+.row {
+  max-width: 1140px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-nadpis h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.main-nadpis h2:after {
+  content: ""; /* jakože tam nic nebude*/
+  border-bottom: 2px solid red; /* přidím čáru */
+  display: block; /* aby to zabíralo celý řádek */
+  width: 300px;
+  margin: 20px auto;
+}
+/***** header-obsah *****/
+
+header {
+  background: linear-gradient(rgba(41, 0, 0, 0.5), rgba(53, 2, 2, 0.5)),
+    url("images/zmrzlina.jpg");
+  height: 100vh;
+  background-size: cover; /* ořežou se okraje a prostředek obrázku bude v pozadí*/
+  background-attachment: fixed; /* efekt posouvajícího se obrázku */
+  padding-bottom: 20px; /* Přidání spodního odsazení */
+}
+
+.nadpis {
+  position: absolute; /* bez dané pozice - vytrhnu to */
+  top: 80%; /* horizontálně uprostřed */
+  left: 50%; /* vertikálně uprostřed */
+  transform: translate(-50%, -50%); /* aby byl střed nadpisu uprostřed */
+}
+
+.nadpis h1 {
+  color: white;
+  font-size: 35px;
+  text-transform: uppercase; /* velká písmena */
+  letter-spacing: 2.2px; /*/mezery mezi písmenky*/
+  word-spacing: 3.5px; /* mezery mezi slovy */
+}
+
+.btn {
+  display: block;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid rgb(228, 210, 210);
+  border-radius: 10px;
+  padding: 5px 5px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Rozdělí logo a menu */
+  max-width: 1140px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0; /* Přidá vertikální odsazení */
+}
+
+.logo {
+  flex-grow: 1; /* Logo zůstane vlevo */
+}
+
+.logo img {
+  width: 200px;
+  margin-left: 0px; /* Zrušení marginu, aby bylo úplně vlevo */
+  margin-top: 20px;
+}
+
+nav {
+  flex-grow: 1; /* Menu zabere dostupný prostor */
+  display: flex;
+  justify-content: flex-end; /* Posune menu úplně doprava */
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 15px; /* odsazení jednotlivých odkazů */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px; /* Zvětšení písma */
+  padding: 10px 15px; /* Přidání prostoru kolem textu */
+}
+
+/***** krémové *****/
+
+.kremove-foto img {
+  max-width: 100%; /* obrázek se roztáhne na 100% šířky grid sloupečku - vznikne mezera nezi fotkami*/
+  height: auto;
+  border-radius: 10px;
+}
+
+/***** sorbety *****/
+.sorbet-info img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.sorbet-text {
+  margin-bottom: 20px;
+}
+
+.sorbet-text div {
+  width: 50px;
+  height: 50px;
+  border: 2px solid red;
+  text-align: center;
+  border-radius: 50%; /* zakulacení rámečku - číslo v kroužku */
+  padding: 12px;
+  float: left; /* aby byly čísla vedle textu*/
+}
+
+.sorbet-info p {
+  margin-left: 60px;
+}
+
+/***** reference *****/
+
+.reference {
+  background: linear-gradient(rgba(41, 0, 0, 0.7), rgba(53, 2, 2, 0.7)),
+    url(images/ice-cream.jpg);
+}
+
+.reference h2 {
+  color: white;
+  padding-top: 50px;
+}
+
+.zakaznici p {
+  color: white;
+}
+
+.one-reference p {
+  font-style: italic; /* kurzíva */
+}
+
+.foto-name {
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.foto-name img {
+  width: 50px;
+  border-radius: 50%;
+  float: left;
+}
+
+.foto-name p {
+  padding: 13px;
+  margin-left: 50px;
+  font-style: normal;
+}
+
+/***** kontakty *****/
+
+.contact-form {
+  max-width: 700px;
+  text-align: center;
+}
+
+.contact-form input {
+  width: 80%;
+  margin: 2px;
+  padding: 2px;
+  border: 1px solid rgb(79, 9, 9);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.contact-form textarea {
+  width: 80%;
+  margin: 5px;
+  padding: 2px;
+  border: 1px solid rgb(79, 9, 9);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.contact-form input [type="submit"] {
+  background-color: rgb(65, 11, 11);
+  color: white;
+  box-shadow: 5px 5px 5px grey;
+}
+
+input [type="submit"]:hover {
+  background-color: rgb(254, 250, 250);
+  color: rgb(51, 5, 5);
+}
+
+/***** footer *****/
+
+.footer {
+  background-color: rgb(48, 7, 7);
+  color: white;
+  padding: 10px;
+}
+
+.footer-kontakt {
+  background-color: rgb(48, 7, 7);
+  color: white;
+  padding: 10px;
+  position: relative;
+  top: 2000px;
+}
+
+.footer-krem {
+  background-color: rgb(48, 7, 7);
+  color: white;
+  padding: 10px;
+  position: relative;
+  top: 170px;
+}
+
+.footer-sorbet {
+  background-color: rgb(48, 7, 7);
+  color: white;
+  padding: 10px;
+  position: relative;
+  top: 330px;
+}
+
+/***** konec float *****/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/***** media query *****/
+
+@media (max-width: 768px) {
+  .nadpis {
+    text-align: center;
+  }
+  .kremove-foto,
+  .sorbet-info,
+  .zakaznici {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .col {
+    width: 100%;
+  }
+}
